@@ -1,9 +1,28 @@
-import Header from "./components/Header"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./Layout";
+import HomePage from "./Pages/HomePage";
+import ShoppingCartPage from "./Pages/ShoppingCartPage";
+import SingleProductPage from "./Pages/SingleProductPage";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
-    return(
-        <Header />
-    )
+  return (
+    <>
+      <QueryClientProvider client={queryClient}>
+        <Layout>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/product/:id" element={<SingleProductPage />} />
+              <Route path="/shopping/:id" element={<ShoppingCartPage />} />
+            </Routes>
+          </BrowserRouter>
+        </Layout>
+      </QueryClientProvider>
+    </>
+  );
 }
 
-export default App
+export default App;

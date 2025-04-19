@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <div className="bg-[#feeb9d] h-15">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center container-primary">
           <div className="mt-1.5">
             <img src="/images/logo-main.png" alt="" />
           </div>
