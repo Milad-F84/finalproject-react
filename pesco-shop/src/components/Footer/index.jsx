@@ -9,7 +9,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 export default function Footer() {
   return (
     <>
-      <div className="bg-[#fffaf3] h-auto">
+      <div className="bg-[#f9f3f0] h-auto ">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-7 container-primary p-5">
           <div className="flex flex-col gap-1 justify-center">
             <div>
