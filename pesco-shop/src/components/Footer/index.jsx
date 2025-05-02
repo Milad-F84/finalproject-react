@@ -33,10 +33,10 @@ export default function Footer() {
             <div className="flex items-center gap-1">
                 <h1>ما را بیابید:</h1>
                 <div className="flex gap-1">
-                    <FacebookIcon className="hover:text-red-500 cursor-pointer"/>
-                    <InstagramIcon className="hover:text-red-500 cursor-pointer"/>
-                    <LinkedInIcon className="hover:text-red-500 cursor-pointer"/>
-                    <TwitterIcon className="hover:text-red-500 cursor-pointer"/>
+                    <FacebookIcon className="hover:text-red-500 duration-150 cursor-pointer"/>
+                    <InstagramIcon className="hover:text-red-500 duration-150 cursor-pointer"/>
+                    <LinkedInIcon className="hover:text-red-500 duration-150 cursor-pointer"/>
+                    <TwitterIcon className="hover:text-red-500 duration-150 cursor-pointer"/>
                 </div>
             </div>
           </div>
@@ -44,31 +44,31 @@ export default function Footer() {
             <h1 className="font-bold mb-7 text-xl">خدمات مشتری</h1>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300" />
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 مجموعه‌ها و تحویل
               </p>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 بازپرداخت و بازپرداخت
               </p>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 شرایط و ضوابط
               </p>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 بازگشت تحویل
               </p>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 مکان‌های فروشگاه
               </p>
             </div>
@@ -77,31 +77,31 @@ export default function Footer() {
             <h1 className="font-bold mb-7 text-xl">پیوند سریع</h1>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 خط‌مشی رازداری
               </p>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 شرایط استفاده
               </p>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 سؤالات متداول
               </p>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 تماس
               </p>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="text-orange-300"/>
-              <p className="text-[#5a5858] cursor-pointer hover:text-red-500">
+              <p className="text-[#5a5858] cursor-pointer hover:text-red-500 duration-150">
                 ورود به سیستم / ثبت نام
               </p>
             </div>

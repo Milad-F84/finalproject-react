@@ -18,7 +18,7 @@ export default function Banner() {
               </p>
             </div>
             <div>
-              <button className="bg-black text-white p-4 rounded-3xl cursor-pointer hover:bg-red-500 transition">اکنون خرید کنید</button>
+              <button className="bg-black text-white p-4 rounded-3xl cursor-pointer hover:bg-red-500 duration-200">اکنون خرید کنید</button>
             </div>
           </div>
           <div>

@@ -2,7 +2,8 @@ import DehazeIcon from "@mui/icons-material/Dehaze";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import SearchIcon from "@mui/icons-material/Search";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function Header() {
   return (
@@ -35,17 +36,33 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="hidden md:flex md:justify-between md:items-center md:bg-[#feeb9d] md:h-17">
-        <div className="flex items-center gap-2">
-        <DehazeIcon />
-        <p>دسته محصولات</p>
+      <div className="hidden md:flex md:justify-between md:items-center md:bg-[#feeb9d] md:h-17 p-4">
+        <div className="flex items-center gap-2 bg-white p-3 rounded-xl">
+          <DehazeIcon />
+          <p>دسته محصولات</p>
+          <KeyboardArrowDownIcon />
         </div>
         <div className="flex items-center gap-5">
-          <a href="#">خانه</a>
-          <a href="#">خرید</a>
-          <a href="#">وبلاگ</a>
-          <a href="#">صفحات</a>
-          <a href="#">تماس</a>
+          <div>
+            <a href="#" className="hover:text-red-500 duration-200">خانه</a>
+            <KeyboardArrowDownIcon />
+          </div>
+          <div>
+            <a href="#" className="hover:text-red-500 duration-200">خرید</a>
+            <KeyboardArrowDownIcon />
+          </div>
+          <div>
+            <a href="#" className="hover:text-red-500 duration-200">وبلاگ</a>
+            <KeyboardArrowDownIcon />
+          </div>
+          <div>
+            <a href="#" className="hover:text-red-500 duration-200">صفحات</a>
+            <KeyboardArrowDownIcon />
+          </div>
+          <div>
+            <a href="#" className="hover:text-red-500 duration-200">تماس</a>
+            <KeyboardArrowDownIcon />
+          </div>
         </div>
         <div className="flex justify-between items-center gap-1">
           <FavoriteBorderIcon />

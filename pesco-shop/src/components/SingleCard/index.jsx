@@ -24,7 +24,7 @@ export default function SingleProduct({ image, title, id, rate, price }) {
         <p>({rate})</p>
       </div>
       <div className="flex justify-between items-center gap-2">
-        <h2 className="font-bold hover:text-red-500 transition line-clamp-1">
+        <h2 className="font-bold hover:text-red-500 duration-150 line-clamp-1">
           {title}
         </h2>
         <p>{price}$</p>
