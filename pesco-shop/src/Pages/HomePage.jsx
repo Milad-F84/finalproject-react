@@ -7,11 +7,20 @@ import useGetProducts from "../request/useGetProducts";
 export default function HomePage() {
   const { data: products, isLoading, error, isError } = useGetProducts();
   if (isLoading) {
-    return <h1>LOADING...</h1>;
+    return (
+      <div className="h-screen flex justify-center items-center">
+        <img src="\images\loading-shop.gif" alt="" className="" />
+      </div>
+    );
   }
 
   if (isError) {
-    return <h1>an error has been accured{error.message}</h1>;
+    return (
+      <div className="h-screen flex flex-col justify-center items-center">
+        <img src="\images\error-shop.gif" alt="" className="" />
+        <h1>an error has been accured{error.message}</h1>
+      </div>
+    );
   }
 
   return (
@@ -22,12 +31,12 @@ export default function HomePage() {
 
       <div className="bg-[#fffaf3] p-10">
         <div className="container-primary">
-        <div>
-          <p className="text-red-500">محصولات ویژه</p>
-        </div>
-        <div>
-          <h1 className="font-bold text-2xl">مجموعه ویژگی های ما</h1>
-        </div>
+          <div>
+            <p className="text-red-500">محصولات ویژه</p>
+          </div>
+          <div>
+            <h1 className="font-bold text-2xl">مجموعه ویژگی های ما</h1>
+          </div>
         </div>
         <div className="grid md:grid-cols-4 gap-8 container-primary ">
           {products?.data?.map((item) => (

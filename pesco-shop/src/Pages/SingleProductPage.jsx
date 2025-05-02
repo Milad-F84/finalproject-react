@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import useGetSingleProduct from "../request/useGetSingleProduct";
+import StarIcon from "@mui/icons-material/Star";
 
 export default function SingleProductPage() {
   const { productId } = useParams();
@@ -20,7 +21,7 @@ export default function SingleProductPage() {
           <StarIcon className="text-red-500" />
           <StarIcon className="text-red-500" />
         </div>
-        <p>({data?.data?.rate})</p>
+        <p>({data?.data?.rating?.rate})</p>
       </div>
       <div className="flex justify-between items-center gap-2">
         <h2 className="font-bold hover:text-red-500 transition line-clamp-1">
