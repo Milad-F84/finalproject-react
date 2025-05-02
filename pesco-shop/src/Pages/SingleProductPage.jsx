@@ -7,6 +7,23 @@ export default function SingleProductPage() {
   const { data, isLoading, error, isError } = useGetSingleProduct(productId);
   console.log(data);
 
+  if (isLoading) {
+    return (
+      <div className="h-screen flex justify-center items-center">
+        <img src="\images\loading-shop.gif" alt="" className="" />
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="h-screen flex flex-col justify-center items-center">
+        <img src="\images\error-shop.gif" alt="" className="" />
+        <h1>an error has been accured{error.message}</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="shadow-lg rounded-2xl overflow-hidden cursor-pointer p-3">
       <img
