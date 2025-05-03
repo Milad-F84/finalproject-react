@@ -50,15 +50,15 @@ export default function SingleProductPage() {
           </div>
           <h2>{data?.data?.description}</h2>
           <hr className="text-gray-400"/>
-          <p className="font-bold text-lg">{data?.data?.price}$</p>
-          <div className="md:flex md:items-center md:gap-5">
-            <div className="border-2 border-gray-400 rounded-3xl p-3 max-w-[150px] flex gap-2 justify-between items-center h-[40px]">
-              <button className="text-2xl">+</button>
+          <p className="font-bold text-lg text-center md:text-start">{data?.data?.price}$</p>
+          <div className="flex flex-col gap-2 items-center md:flex-row md:items-center md:gap-5 ">
+            <div className="border-2 border-gray-400 rounded-3xl p-3 w-[150px] flex gap-2 justify-between items-center h-[40px]">
+              <button className="text-2xl cursor-pointer">+</button>
               <span className="text-xl">2</span>
-              <button className="text-2xl">-</button>
+              <button className="text-2xl cursor-pointer">-</button>
             </div>
             <div>
-              <button className="bg-black text-white max-w-[150px] h-[40px] rounded-3xl p-2 mb-3 text-center">
+              <button className="bg-black text-white w-[150px] h-[40px] rounded-3xl p-2 text-center cursor-pointer hover:bg-red-500 duration-250">
                 افزودن به سبد خرید
               </button>
             </div>
