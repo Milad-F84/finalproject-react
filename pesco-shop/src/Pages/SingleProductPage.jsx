@@ -8,7 +8,7 @@ import { useMemo } from "react";
 export default function SingleProductPage() {
   const { productId } = useParams();
   const { data, isLoading, error, isError } = useGetSingleProduct(productId);
-  const { products, addProduct } = useCart();
+  const { products, addProduct, removeProduct} = useCart();
   console.log(data);
 
   const thisProductCount = useMemo(() => {
@@ -70,7 +70,7 @@ export default function SingleProductPage() {
             <div className="border-2 border-gray-400 rounded-3xl p-3 w-[150px] flex gap-2 justify-between items-center h-[40px]">
               <button onClick={() => addProduct(productId)} className="text-2xl cursor-pointer">+</button>
               <span className="text-xl">{thisProductCount}</span>
-              <button className="text-2xl cursor-pointer">-</button>
+              <button onClick={() => removeProduct(productId)} className="text-2xl cursor-pointer">-</button>
             </div>
             <div>
               <button className="bg-black text-white w-[150px] h-[40px] rounded-3xl p-2 text-center cursor-pointer hover:bg-red-500 duration-250">
