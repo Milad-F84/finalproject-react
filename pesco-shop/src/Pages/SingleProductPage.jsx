@@ -2,11 +2,24 @@ import { useParams } from "react-router-dom";
 import useGetSingleProduct from "../request/useGetSingleProduct";
 import StarIcon from "@mui/icons-material/Star";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import useCart from "../store/useCart";
+import { useMemo } from "react";
 
 export default function SingleProductPage() {
   const { productId } = useParams();
   const { data, isLoading, error, isError } = useGetSingleProduct(productId);
+  const { products, addProduct } = useCart();
   console.log(data);
+
+  const thisProductCount = useMemo(() => {
+    const foundIndex = products.findIndex((item) => item.id === productId);
+
+    if (foundIndex == -1) {
+      return 0;
+    } else {
+      return products[foundIndex].quantity;
+    }
+  }, [products]);
 
   if (isLoading) {
     return (
@@ -49,12 +62,14 @@ export default function SingleProductPage() {
             <p>({data?.data?.rating?.rate})</p>
           </div>
           <h2>{data?.data?.description}</h2>
-          <hr className="text-gray-400"/>
-          <p className="font-bold text-lg text-center md:text-start">{data?.data?.price}$</p>
+          <hr className="text-gray-400" />
+          <p className="font-bold text-lg text-center md:text-start">
+            {data?.data?.price}$
+          </p>
           <div className="flex flex-col gap-2 items-center md:flex-row md:items-center md:gap-5 ">
             <div className="border-2 border-gray-400 rounded-3xl p-3 w-[150px] flex gap-2 justify-between items-center h-[40px]">
-              <button className="text-2xl cursor-pointer">+</button>
-              <span className="text-xl">2</span>
+              <button onClick={() => addProduct(productId)} className="text-2xl cursor-pointer">+</button>
+              <span className="text-xl">{thisProductCount}</span>
               <button className="text-2xl cursor-pointer">-</button>
             </div>
             <div>
