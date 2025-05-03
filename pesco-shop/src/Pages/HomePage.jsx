@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import Category from "../components/Category";
+import News from "../components/NewsState";
 import Off from "../components/Off";
 import SingleProduct from "../components/SingleCard";
 import useGetProducts from "../request/useGetProducts";
@@ -51,6 +52,8 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+
+      <News />
     </>
   );
 }
