@@ -15,7 +15,7 @@ export default function News() {
                 type="text"
                 placeholder="آدرس ایمیل خود را بنویسید"
               />
-              <button className="bg-black text-white cursor-pointer hover:bg-red-500 duration-150 rounded-3xl p-3 md:absolute md:right-[33rem] w-fit">
+              <button className="bg-black text-white cursor-pointer hover:bg-red-500 duration-150 rounded-3xl p-4 w-[100px]">
                 اشتراک
               </button>
             </div>

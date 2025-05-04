@@ -43,36 +43,36 @@ export default function Deal() {
     <>
       <div className="bg-[#fffaf3] mb-10">
         <div className=" container-primary border-2 rounded-3xl p-5 flex justify-between items-center">
-          <div className="flex flex-col justify-center items-center gap-3 md:justify-start md:items-start">
-            <div className="flex">
+          <div className="flex flex-col justify-center items-center gap-3 md:justify-start md:items-start md:gap-8">
+            <div className="flex items-center">
               <LocalOfferIcon />
-              <p>معامله هفته</p>
+              <p className="font-bold text-xl">معامله هفته</p>
             </div>
-            <div className="text-center text-2xl md:text-start">
-              <p>
+            <div className="text-center md:text-start">
+              <p className="font-bold text-2xl md:text-3xl">
                 عجله کن! پیشنهاد به پایان می رسد. دریافت
                 <span className="text-red-500 font-bold underline"> تا 80٪ تخفیف</span>
               </p>
             </div>
             <div className="grid grid-rows-2 grid-cols-2 gap-4 md:flex md:justify-between md:items-center">
                 <div className="flex flex-col justify-center items-center border-2 border-gray-300 rounded-[50%] p-6">
-                    <span>{seconds}</span>
-                    <span>ثانیه</span>
+                    <span className="font-bold text-2xl">{seconds}</span>
+                    <span className="text-gray-600 font-bold">ثانیه</span>
                 </div>
                 <div className="flex flex-col justify-center items-center border-2 border-gray-300 rounded-[50%] p-6">
-                    <span>{minute}</span>
-                    <span>دقیقه</span>
+                    <span className="font-bold text-2xl">{minute}</span>
+                    <span className="text-gray-600 font-bold">دقیقه</span>
                 </div>
                 <div className="flex flex-col justify-center items-center border-2 border-gray-300 rounded-[50%] p-6">
-                    <span>{hour}</span>
-                    <span>ساعت</span>
+                    <span className="font-bold text-2xl">{hour}</span>
+                    <span className="text-gray-600 font-bold">ساعت</span>
                 </div>
                 <div className="flex flex-col justify-center items-center border-2 border-gray-300 rounded-[50%] p-6">
-                    <span>{day}</span>
-                    <span>روز</span>
+                    <span className="font-bold text-2xl">{day}</span>
+                    <span className="text-gray-600 font-bold">روز</span>
                 </div>
             </div>
-            <button className="bg-black text-white cursor-pointer hover:bg-red-500 duration-150 rounded-3xl p-3">اکنون خرید کنید</button>
+            <button className="bg-black text-white cursor-pointer hover:bg-red-500 duration-200 rounded-3xl p-3">اکنون خرید کنید</button>
           </div>
           <img className="hidden md:block md:object-contain md:rounded-3xl" src="\images\deal-1.png" alt="" />
         </div>
