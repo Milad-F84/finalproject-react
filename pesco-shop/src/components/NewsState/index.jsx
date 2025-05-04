@@ -2,7 +2,7 @@ export default function News() {
   return (
     <>
       <div className="bg-[#fffaf3]">
-        <div className="flex justify-between items-center container-primary bg-white p-8">
+        <div className="flex justify-between items-center container-primary p-8">
           <div className="flex flex-col justify-center items-center md:justify-start md:items-start  gap-3 p-5">
             <h1 className="font-bold text-3xl">خبرنامه ما</h1>
             <p className="text-center text-xl md:text-start md:max-w-[450px]">

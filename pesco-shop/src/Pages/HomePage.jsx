@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import Category from "../components/Category";
+import Deal from "../components/Deal";
 import News from "../components/NewsState";
 import Off from "../components/Off";
 import SingleProduct from "../components/SingleCard";
@@ -53,6 +54,7 @@ export default function HomePage() {
         </div>
       </div>
 
+      <Deal />
       <News />
     </>
   );
