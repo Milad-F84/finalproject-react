@@ -11,15 +11,18 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Layout>
-          <BrowserRouter>
+        <BrowserRouter>
+          <Layout>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/products/:productId" element={<SingleProductPage />} />
+              <Route
+                path="/products/:productId"
+                element={<SingleProductPage />}
+              />
               <Route path="/shoppingcart" element={<ShoppingCartPage />} />
             </Routes>
-          </BrowserRouter>
-        </Layout>
+          </Layout>
+        </BrowserRouter>
       </QueryClientProvider>
     </>
   );

@@ -6,8 +6,10 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
@@ -23,8 +25,8 @@ export default function Header() {
             <img src="/images/logo-main.png" alt="" />
           </div>
           <div className="flex justify-between items-center gap-5 md:hidden">
-            <div>
-              <ShoppingCartIcon className="cursor-pointer" />
+            <div onClick={() => navigate(`/shoppingcart`)}>
+              <ShoppingCartIcon className="cursor-pointer"/>
             </div>
             <div>
               <button
@@ -212,7 +214,7 @@ export default function Header() {
         </div>
         <div className="flex justify-between items-center gap-5">
           <FavoriteBorderIcon className="cursor-pointer" />
-          <ShoppingCartIcon className="cursor-pointer" />
+          <ShoppingCartIcon className="cursor-pointer" onClick={() => navigate(`/shoppingcart`)}/>
         </div>
       </div>
     </>
