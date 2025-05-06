@@ -98,13 +98,13 @@ export default function Header() {
               )}
             </div>
           </div>
-          <div className="hidden md:flex md:items-center md:gap-1 md:border-2 md:rounded-2xl">
-            <SearchIcon />
+          <div className="hidden md:flex md:items-center md:gap-1">
             <input
-              className="bg-white border-0 p-1"
-              type="text"
+              className=" border-2 rounded-2xl p-1"
+              type="search"
               placeholder="جست و جو"
             />
+            <SearchIcon />
           </div>
 
           <div className="hidden md:flex md:items-center">

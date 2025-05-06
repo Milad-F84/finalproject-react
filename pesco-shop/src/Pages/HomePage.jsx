@@ -20,7 +20,7 @@ export default function HomePage() {
     return (
       <div className="h-screen flex flex-col justify-center items-center">
         <img src="\images\error-shop.gif" alt="" className="" />
-        <h1>an error has been accured{error.message}</h1>
+        <h1 className="font-bold animate-pulse text-center">an error has been accured{error.message}</h1>
       </div>
     );
   }
