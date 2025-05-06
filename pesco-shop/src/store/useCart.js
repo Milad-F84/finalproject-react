@@ -73,7 +73,7 @@ const useCart = create((set) => {
                   ...prev.products,
                   {
                     id,
-                    quantity: 1,
+                    quantity: 0,
                   },
                 ])
               );
@@ -82,7 +82,7 @@ const useCart = create((set) => {
                   ...prev.products,
                   {
                     id,
-                    quantity: 1,
+                    quantity: 0,
                   },
                 ],
               };

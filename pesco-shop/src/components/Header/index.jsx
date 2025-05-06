@@ -26,14 +26,14 @@ export default function Header() {
           </div>
           <div className="flex justify-between items-center gap-5 md:hidden">
             <div onClick={() => navigate(`/shoppingcart`)}>
-              <ShoppingCartIcon className="cursor-pointer"/>
+              <ShoppingCartIcon className="cursor-pointer" fontSize="large"/>
             </div>
             <div>
               <button
                 onClick={() => setOpen(true)}
                 className="md:hidden p-2 cursor-pointer"
               >
-                <DehazeIcon />
+                <DehazeIcon fontSize="large"/>
               </button>
 
               {/* منوی باز شده */}
@@ -110,14 +110,14 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex md:items-center">
-            <SupportAgentIcon />
+            <SupportAgentIcon fontSize="large"/>
             <p>+94 123 4567 894</p>
           </div>
         </div>
       </div>
       <div className="hidden md:flex md:justify-between md:items-center md:bg-[#feeb9d] md:h-17 p-4">
         <div className="flex items-center gap-2 bg-white p-3 rounded-xl">
-          <DehazeIcon />
+          <DehazeIcon/>
           <p>دسته محصولات</p>
           <KeyboardArrowDownIcon />
         </div>
@@ -213,8 +213,8 @@ export default function Header() {
           </div>
         </div>
         <div className="flex justify-between items-center gap-5">
-          <FavoriteBorderIcon className="cursor-pointer" />
-          <ShoppingCartIcon className="cursor-pointer" onClick={() => navigate(`/shoppingcart`)}/>
+          <FavoriteBorderIcon className="cursor-pointer" fontSize="large"/>
+          <ShoppingCartIcon className="cursor-pointer" fontSize="large" onClick={() => navigate(`/shoppingcart`)}/>
         </div>
       </div>
     </>
