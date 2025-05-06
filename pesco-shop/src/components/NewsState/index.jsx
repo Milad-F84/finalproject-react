@@ -2,8 +2,8 @@ export default function News() {
   return (
     <>
       <div className="bg-[#fffaf3] md:p-10">
-        <div className="flex justify-between items-center container-primary p-8">
-          <div className="flex flex-col justify-center items-center md:justify-start md:items-start  gap-3 p-5">
+        <div className="flex justify-between items-center container-primary p-5">
+          <div className="flex flex-col justify-center items-center md:justify-start md:items-start  gap-3">
             <h1 className="font-bold text-3xl">خبرنامه ما</h1>
             <p className="text-center text-xl md:text-start md:max-w-[450px]">
               به‌روزرسانی هفتگی را دریافت کنید. ثبت نام کنید و تا <span className="text-red-500 font-bold underline">20% تخفیف </span>
