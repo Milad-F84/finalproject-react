@@ -2,7 +2,7 @@ export default function Banner() {
   return (
     <>
       <div className="bg-[#fffaf3]">
-        <div className="flex flex-col md:flex-row justify-between items-center container-primary gap-4 p-5">
+        <div className="flex flex-col md:flex-row justify-between items-center container-primary gap-4 p-5 md:p-20">
           <div className="flex flex-col items-center gap-3 md:items-start">
             <div>
               <p className="text-red-500 font-bold text-xl">بهترین برای دسته های شما</p>
