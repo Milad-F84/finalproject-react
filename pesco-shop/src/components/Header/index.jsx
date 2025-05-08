@@ -5,13 +5,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CloseIcon from "@mui/icons-material/Close";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useCart from "../../store/useCart";
 
 export default function Header() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
+  const { products } = useCart();
+
+  const totalQuantity = products.reduce((acc, item) => acc + item.quantity, 0);
 
   const toggleSubmenu = (name) => {
     setOpenSubmenu(openSubmenu === name ? null : name);
@@ -24,16 +28,21 @@ export default function Header() {
           <div className="mt-1.5">
             <img src="/images/logo-main.png" alt="" />
           </div>
-          <div className="flex justify-between items-center gap-5 md:hidden">
-            <div onClick={() => navigate(`/shoppingcart`)}>
-              <ShoppingCartIcon className="cursor-pointer" fontSize="large"/>
+          <div className="flex justify-between items-center gap-4 md:hidden">
+            <div onClick={() => navigate(`/shoppingcart`)} className="relative">
+              <ShoppingCartIcon className="cursor-pointer" fontSize="large" />
+              {totalQuantity > 0 && (
+                <span className="absolute -top-2 -right-2 bg-orange-400 text-black rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                  {totalQuantity}
+                </span>
+              )}
             </div>
             <div>
               <button
                 onClick={() => setOpen(true)}
                 className="md:hidden p-2 cursor-pointer"
               >
-                <DehazeIcon fontSize="large"/>
+                <DehazeIcon fontSize="large" />
               </button>
 
               {/* منوی باز شده */}
@@ -110,14 +119,14 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex md:items-center">
-            <SupportAgentIcon fontSize="large"/>
+            <SupportAgentIcon fontSize="large" />
             <p>+94 123 4567 894</p>
           </div>
         </div>
       </div>
       <div className="hidden md:flex md:justify-between md:items-center md:bg-[#feeb9d] md:h-17 p-4">
         <div className="flex items-center gap-2 bg-white p-3 rounded-xl">
-          <DehazeIcon/>
+          <DehazeIcon />
           <p>دسته محصولات</p>
           <KeyboardArrowDownIcon />
         </div>
@@ -213,8 +222,19 @@ export default function Header() {
           </div>
         </div>
         <div className="flex justify-between items-center gap-5">
-          <FavoriteBorderIcon className="cursor-pointer" fontSize="large"/>
-          <ShoppingCartIcon className="cursor-pointer" fontSize="large" onClick={() => navigate(`/shoppingcart`)}/>
+          <FavoriteBorderIcon className="cursor-pointer" fontSize="large" />
+          <div className="relative">
+            <ShoppingCartIcon
+              className="cursor-pointer"
+              fontSize="large"
+              onClick={() => navigate(`/shoppingcart`)}
+            />
+            {totalQuantity > 0 && (
+              <span className="absolute -top-2 -right-2 bg-orange-400 text-black rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                {totalQuantity}
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </>
