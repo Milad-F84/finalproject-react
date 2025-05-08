@@ -125,10 +125,48 @@ export default function Header() {
         </div>
       </div>
       <div className="hidden md:flex md:justify-between md:items-center md:bg-[#feeb9d] md:h-17 p-4">
-        <div className="flex items-center gap-2 bg-white p-3 rounded-xl">
+        <div className="flex items-center gap-2 bg-white p-3 rounded-xl relative group cursor-pointer">
           <DehazeIcon />
           <p>دسته محصولات</p>
           <KeyboardArrowDownIcon />
+          <div className="absolute top-full right-0 hidden bg-white rounded-2xl shadow-lg z-50 group-hover:flex flex-col gap-4 justify-center items-center w-65 p-3 ">
+            <div className="flex items-center gap-1 border-2 border-gray-300 p-1 w-[168px]">
+              <img src="\images\shirt-cat.png" alt="" />
+              <a
+                className="bloc hover:text-red-500 duration-200 text-center font-bold"
+                href="#"
+              >
+                پیراهن مردانه
+              </a>
+            </div>
+            <div className="flex items-center gap-1 border-2 border-gray-300 p-1 w-[168px]">
+              <img src="\images\denim-cat.png" alt="" />
+              <a
+                className="block hover:text-red-500 duration-200 text-center font-bold"
+                href="#"
+              >
+                شلوار جین
+              </a>
+            </div>
+            <div className="flex items-center gap-1 border-2 border-gray-300 p-1 w-[168px]">
+              <img src="\images\suit-cat.png" alt="" />
+              <a
+                className="block hover:text-red-500 duration-200 text-center font-bold"
+                href="#"
+              >
+                کت و شلوار
+              </a>
+            </div>
+            <div className="flex items-center gap-1 border-2 border-gray-300 p-1 w-[168px]">
+              <img src="\images\sweaters-cat.png" alt="" />
+              <a
+                className="block hover:text-red-500 duration-200 text-center font-bold"
+                href="#"
+              >
+                ژاکت
+              </a>
+            </div>
+          </div>
         </div>
         <div className="flex items-center gap-5">
           <div className="relative group">
