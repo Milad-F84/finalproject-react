@@ -2,6 +2,9 @@ import { useCallback, useMemo, useState } from "react";
 import ShoppingCart from "../components/ShoppingCart";
 import useCart from "../store/useCart";
 import useGetSingleProduct from "../request/useGetSingleProduct";
+import { Breadcrumbs, Link, Typography } from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 export default function ShoppingCartPage() {
   const { products } = useCart();
@@ -14,13 +17,45 @@ export default function ShoppingCartPage() {
     setPriceMap((prev) => ({ ...prev, [productId]: totalPrice }));
   }, []);
 
-  const totalPrice = Object.values(priceMap).reduce((sum, price) => sum + price, 0);
+  const totalPrice = Object.values(priceMap).reduce(
+    (sum, price) => sum + price,
+    0
+  );
 
   console.log("priceMap:", priceMap);
 
   return (
     <>
       <div className="max-w-4xl mx-auto py-8 px-4">
+        <div className="mb-6">
+          <Breadcrumbs
+            separator={<NavigateNextIcon fontSize="small" />}
+            aria-label="breadcrumb"
+            sx={{
+              "& .MuiBreadcrumbs-li": {
+                display: "flex",
+                alignItems: "center",
+                fontSize: "1rem",
+              },
+            }}
+          >
+            <Link
+              underline="hover"
+              color="inherit"
+              href="/"
+              sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
+            >
+              <HomeIcon sx={{ fontSize: 20 }} />
+              خانه
+            </Link>
+            <Typography
+              color="primary"
+              sx={{ display: "flex", alignItems: "center", fontWeight: 500 }}
+            >
+              سبد خرید
+            </Typography>
+          </Breadcrumbs>
+        </div>
         <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
           سبد خرید شما
         </h1>
@@ -45,8 +80,15 @@ export default function ShoppingCartPage() {
                 مجموع تعداد کالا:{" "}
                 <span className="text-orange-500">{totalItems}</span>
               </span>
-              <p className="text-xl font-semibold text-gray-700">قیمت کل: <span className="text-orange-500">{totalPrice.toFixed(2)}$</span></p>
-              <button className="text-sm text-white bg-red-500 hover:bg-black px-4 py-1 rounded-md transition cursor-pointer duration-200">رفتن برای تسویه حساب</button>
+              <p className="text-xl font-semibold text-gray-700">
+                قیمت کل:{" "}
+                <span className="text-orange-500">
+                  {totalPrice.toFixed(2)}$
+                </span>
+              </p>
+              <button className="text-sm text-white bg-red-500 hover:bg-black px-4 py-1 rounded-md transition cursor-pointer duration-200">
+                رفتن برای تسویه حساب
+              </button>
             </div>
           </div>
         )}
