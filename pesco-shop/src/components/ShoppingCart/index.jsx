@@ -1,7 +1,9 @@
 import useGetSingleProduct from "../../request/useGetSingleProduct";
+import useCart from "../../store/useCart";
 
 export default function ShoppingCart({productId , quantity}){
     const {data , isLoading , error , isError} = useGetSingleProduct(productId);
+    const {removeProductCompletely} = useCart();
     
     if(isLoading){
         return (
@@ -29,7 +31,7 @@ export default function ShoppingCart({productId , quantity}){
                 <p className="text-gray-600">قیمت واحد:{data?.data?.price}</p>
                 <p className="text-gray-600">{quantity}</p>
                 <p className="text-green-600 font-semibold mt-2">مجموع:{(quantity * data?.data?.price).toFixed(2)}$</p>
-                <button onClick={() => removeProductCompletely(productId)}>حذف محصول</button>
+                <button  className="mt-4 text-sm text-white bg-red-500 hover:bg-red-600 px-4 py-1 rounded-md transition cursor-pointer" onClick={() => removeProductCompletely(productId)}>حذف محصول</button>
             </div>
         </div>
         </>
