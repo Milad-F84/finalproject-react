@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import Blog from "../components/Blog";
 import Category from "../components/Category";
 import Deal from "../components/Deal";
 import News from "../components/NewsState";
@@ -55,6 +56,7 @@ export default function HomePage() {
       </div>
 
       <Deal />
+      <Blog />
       <News />
     </>
   );

@@ -42,7 +42,7 @@ export default function Deal() {
   return (
     <>
       <div className="bg-[#fffaf3] mb-10">
-        <div className=" container-primary border-2 rounded-3xl p-5 flex justify-between items-center">
+        <div className=" container-primary border-2 rounded-3xl p-5 flex justify-between items-center mt-7">
           <div className="flex flex-col justify-center items-center gap-3 md:justify-start md:items-start md:gap-8">
             <div className="flex items-center">
               <LocalOfferIcon />
