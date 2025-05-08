@@ -3,7 +3,7 @@ export default function Off() {
     <>
       <div className="bg-[#fffaf3]">
         <div className="flex flex-col md:items-end container-primary gap-4 md:flex-row md:justify-around">
-          <div className="border-2 rounded-2xl p-3 flex flex-col justify-between gap-2 md:mt-3">
+          <div className="border-2 rounded-2xl p-3 flex flex-col md:flex-row justify-between gap-2 md:mt-3">
             <div>
               <div>
                 <p>تا</p>
@@ -20,7 +20,7 @@ export default function Off() {
               <img src="/images/banner/banner-1.png" alt="" className="rounded-2xl"/>
             </div>
           </div>
-          <div className="border-2 rounded-2xl p-3 flex flex-col justify-between gap-2 md:mt-3">
+          <div className="border-2 rounded-2xl p-3 flex flex-col md:flex-row justify-between gap-2 md:mt-3">
             <div>
               <div>
                 <p>تا</p>

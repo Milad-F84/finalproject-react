@@ -74,7 +74,7 @@ export default function Deal() {
             </div>
             <button className="bg-black text-white cursor-pointer hover:bg-red-500 duration-200 rounded-3xl p-3">اکنون خرید کنید</button>
           </div>
-          <img className="hidden md:block md:object-contain md:rounded-3xl" src="\images\deal-1.png" alt="" />
+          <div><img className="hidden md:block md:object-contain md:rounded-3xl" src="\images\deal-1.png" alt="" /></div>
         </div>
       </div>
     </>
