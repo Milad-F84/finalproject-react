@@ -27,7 +27,7 @@ export default function Blog() {
                 آویزان در کمد تبدیل می‌کند، بررسی می‌کند
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 md:max-w-[600px]">
+            <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-6 md:max-w-[600px]">
               <div className="flex flex-col justify-center items-center gap-2 w-full">
                 <img className="rounded-2xl" src="\images\blog\blog-sm-1.png" alt="" />
                 <h2 className="font-bold">

@@ -67,7 +67,7 @@ export default function SingleProductPage() {
         <img
           src={data?.data?.image}
           alt="product image"
-          className="w-full aspect-square object-contain rounded-3xl md:w-[600px]"
+          className="w-full aspect-square object-contain rounded-3xl md:w-[357px]"
         />
         <div className="flex flex-col gap-3">
           <div className="flex justify-start items-center gap-1">
