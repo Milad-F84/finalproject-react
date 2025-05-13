@@ -5,6 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CloseIcon from "@mui/icons-material/Close";
+import LoginIcon from "@mui/icons-material/Login";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useCart from "../../store/useCart";
@@ -95,7 +96,7 @@ export default function Header() {
                         )}
                       </li>
                     ))}
-                    <li className="cursor-pointer">تماس</li>
+                    <li className="cursor-pointer" onClick={() => navigate("/login")}>ورود به حساب کاربری</li>
                   </ul>
 
                   <div className="border rounded-xl p-2 mt-6 flex items-center justify-between">
@@ -260,7 +261,11 @@ export default function Header() {
           </div>
         </div>
         <div className="flex justify-between items-center gap-5">
-          <FavoriteBorderIcon className="cursor-pointer" fontSize="large" />
+          <LoginIcon
+            className="cursor-pointer"
+            fontSize="large"
+            onClick={() => navigate("/login")}
+          />
           <div className="relative">
             <ShoppingCartIcon
               className="cursor-pointer"
