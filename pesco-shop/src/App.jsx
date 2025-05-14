@@ -24,7 +24,7 @@ function App() {
               />
               <Route path="/shoppingcart" element={<ShoppingCartPage />} />
               <Route path="/login" element={<LoginPage />}/>
-              <Route path="/signin" element={<SignupPage />}/>
+              <Route path="/signup" element={<SignupPage />}/>
               <Route path="/profile" element={<ProfilePage />}/>
             </Routes>
           </Layout>

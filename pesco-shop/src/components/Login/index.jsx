@@ -123,11 +123,11 @@ export default function Login() {
               className="text-sm text-white bg-red-500 hover:bg-black px-4 py-1 rounded-md transition cursor-pointer duration-200 max-w-30 w-full"
               type="submit"
             >
-              Login
+              ورود
             </button>
             <p
               className="text-sm underline cursor-pointer mt-2"
-              onClick={() => navigate("/signin")}
+              onClick={() => navigate("/signup")}
             >
               حساب کاربری ندارید؟
             </p>
