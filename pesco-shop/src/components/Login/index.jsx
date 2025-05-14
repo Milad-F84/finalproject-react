@@ -2,11 +2,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { data } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 
 const schema = yup.object({
   username: yup.string().required("لطفا نام کاربری خود را وارد نمایید."),
-  email: yup.string().email("ایمیل نامعتبر است.").required("لطفا ایمیل خود را وارد نمایید."),
+  email: yup
+    .string()
+    .email("ایمیل نامعتبر است.")
+    .required("لطفا ایمیل خود را وارد نمایید."),
   password: yup
     .string()
     .required("لطفا رمز عبور خود را وارد نمایید.")
@@ -14,6 +17,9 @@ const schema = yup.object({
 });
 
 export default function Login() {
+
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -26,26 +32,35 @@ export default function Login() {
     console.log("Form Submitted:", data);
   };
 
-  return(
+  return (
     <>
-    <form onSubmit={handleSubmit(onSubmit)} className="h-screen flex justify-center items-center flex-col gap-6">
-        <div>
-            <label>نام کاربری:</label>
-            <input {...register("username")} />
-            <p>{errors.username?.message}</p>
+      <div className="flex flex-col justify-center items-center min-h-full w-full h-screen">
+        <div className="flex flex-col justify-center items-center max-w-[400px] w-full border-1 border-gray-200 rounded-xl p-10 gap-10 bg-white shadow-md">
+          <img src="\images\logo-main.png" alt="" className="h-12"/>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex justify-center items-center flex-col gap-6 w-full"
+          >
+            <div className="flex flex-col gap-2 w-full">
+              <label className="mb-1 text-sm font-bold text-gray-700">نام کاربری:</label>
+              <input type="text" {...register("username")} className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+              <p className="text-red-500 text-xs mt-1">{errors.username?.message}</p>
+            </div>
+            <div className="flex flex-col gap-2 w-full">
+              <label className="mb-1 text-sm font-bold text-gray-700">رمزعبور:</label>
+              <input type="password" {...register("password")} className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+              <p className="text-red-500 text-xs mt-1">{errors.password?.message}</p>
+            </div>
+            <div className="flex flex-col gap-2 w-full">
+              <label className="mb-1 text-sm font-bold text-gray-700">ایمیل:</label>
+              <input type="email" {...register("email")} className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+              <p className="text-red-500 text-xs mt-1">{errors.email?.message}</p>
+            </div>
+            <button className="text-sm text-white bg-red-500 hover:bg-black px-4 py-1 rounded-md transition cursor-pointer duration-200 max-w-30 w-full" type="submit">Login</button>
+            <p className="text-sm underline cursor-pointer mt-2" onClick={() => navigate("/signin")}>حساب کاربری ندارید؟</p>
+          </form>
         </div>
-                <div>
-            <label>رمزعبور:</label>
-            <input {...register("password")} />
-            <p>{errors.password?.message}</p>
-        </div>
-                <div>
-            <label>ایمیل:</label>
-            <input {...register("email")} />
-            <p>{errors.email?.message}</p>
-        </div>
-        <button type="submit">Login</button>
-    </form>
+      </div>
     </>
-  )
+  );
 }
