@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { data, useNavigate } from "react-router-dom";
+import useAuth from "../../store/useAuth";
 
 const schema = yup.object({
   username: yup.string().required("لطفا نام کاربری خود را وارد نمایید."),
@@ -19,6 +20,7 @@ const schema = yup.object({
 export default function Login() {
 
   const navigate = useNavigate();
+  const login = useAuth((state) => state.login);
 
   const {
     register,
@@ -29,7 +31,11 @@ export default function Login() {
   });
 
   const onSubmit = (data) => {
-    console.log("Form Submitted:", data);
+    const fakeToken = "12345-fake";
+    const {username , email , password} = data;
+
+    login({username , email , password} , fakeToken);
+    navigate("/profile");
   };
 
   return (

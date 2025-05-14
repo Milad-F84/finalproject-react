@@ -5,7 +5,7 @@ import ShoppingCartPage from "./Pages/ShoppingCartPage";
 import SingleProductPage from "./Pages/SingleProductPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import LoginPage from "./Pages/LoginPage";
-import SigninPage from "./Pages/SigninPage";
+import SignupPage from "./Pages/SignupPage";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +23,7 @@ function App() {
               />
               <Route path="/shoppingcart" element={<ShoppingCartPage />} />
               <Route path="/login" element={<LoginPage />}/>
-              <Route path="/signin" element={<SigninPage />}/>
+              <Route path="/signin" element={<SignupPage />}/>
             </Routes>
           </Layout>
         </BrowserRouter>
