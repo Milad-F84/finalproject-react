@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Banner() {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="bg-[#fffaf3]">
@@ -18,7 +23,7 @@ export default function Banner() {
               </p>
             </div>
             <div>
-              <button className="bg-black text-white p-4 rounded-3xl cursor-pointer hover:bg-red-500 duration-200">اکنون خرید کنید</button>
+              <button className="bg-black text-white p-4 rounded-3xl cursor-pointer hover:bg-red-500 duration-200" onClick={() => navigate("/shoppingcart")}>اکنون خرید کنید</button>
             </div>
           </div>
           <div>

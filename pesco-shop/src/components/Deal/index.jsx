@@ -1,11 +1,14 @@
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Deal() {
-    const [day, setDay] = React.useState(250);
+    const [day, setDay] = React.useState(25);
     const [hour, setHour] = React.useState(5);
     const [minute, setMinute] = React.useState(45);
     const [seconds, setSeconds] = React.useState(10);
+
+    const navigate = useNavigate();
 
     React.useEffect(() => {
         if (day > 0) {
@@ -72,7 +75,7 @@ export default function Deal() {
                     <span className="text-gray-600 font-bold">روز</span>
                 </div>
             </div>
-            <button className="bg-black text-white cursor-pointer hover:bg-red-500 duration-200 rounded-3xl p-3">اکنون خرید کنید</button>
+            <button className="bg-black text-white cursor-pointer hover:bg-red-500 duration-200 rounded-3xl p-3" onClick={() => navigate("/shoppingcart")}>اکنون خرید کنید</button>
           </div>
           <div><img className="hidden md:block md:object-contain md:rounded-3xl" src="\images\deal-1.png" alt="" /></div>
         </div>

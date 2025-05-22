@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Off() {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="bg-[#fffaf3]">
@@ -13,7 +18,7 @@ export default function Off() {
                 <h1 className="font-bold text-[#5a5858] text-xl">لباس تابستانی انحصاری کودکان و بزرگسالان</h1>
               </div>
               <div className="mt-2">
-                <button className="bg-black text-white rounded-3xl p-2 cursor-pointer hover:bg-red-500 duration-200">اکنون خرید کنید</button>
+                <button className="bg-black text-white rounded-3xl p-2 cursor-pointer hover:bg-red-500 duration-200" onClick={() => navigate("/shoppingcart")}>اکنون خرید کنید</button>
               </div>
             </div>
             <div>
@@ -30,7 +35,7 @@ export default function Off() {
                 <h1 className="font-bold text-[#5a5858] text-xl">لباس تابستانی انحصاری کودکان و بزرگسالان</h1>
               </div>
               <div className="mt-2">
-                <button className="bg-black text-white rounded-3xl p-2 cursor-pointer hover:bg-red-500 duration-200">اکنون خرید کنید</button>
+                <button className="bg-black text-white rounded-3xl p-2 cursor-pointer hover:bg-red-500 duration-200" onClick={() => navigate("/shoppingcart")}>اکنون خرید کنید</button>
               </div>
             </div>
             <div>
